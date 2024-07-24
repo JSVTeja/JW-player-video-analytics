@@ -12,6 +12,8 @@ view: video_stats {
   dimension: media_id {
     primary_key: yes
     sql: ${TABLE}.media_id ;;
+    drill_fields: [video_desc.title,video_desc.author]
+
 
   }
   dimension: embeds {
