@@ -30,6 +30,12 @@ view: video_stats {
     sql: ${TABLE}.ingested_at ;;
     type: date_time
   }
+
+  measure: play_rate {
+    sql: ${TABLE}.completes/${TABLE}.plays;;
+    drill_fields: [media_id,date]
+    type: number
+  }
   measure: total_embeds {
     type:  sum
     sql: ${embeds} ;;
