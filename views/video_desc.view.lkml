@@ -45,7 +45,7 @@ view: video_desc {
     sql:  ${TABLE}.title ;;
   }
   measure: total_duration {
-    type:  count_distinct
-    sql: ${TABLE}.id ;;
+    type:  sum
+    sql: ${TABLE}.duration ;;
     }
     }
