@@ -14,8 +14,8 @@ view: video_desc {
     sql:  ${TABLE}.external_id ;;
   }
   dimension: id {
-    primary_key: yes
     sql:  ${TABLE}.id ;;
+    primary_key: yes
 
   }
   dimension: author {
