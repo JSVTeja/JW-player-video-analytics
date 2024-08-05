@@ -10,7 +10,6 @@ view: video_stats {
     sql: ${TABLE}.platform ;;
   }
   dimension: media_id {
-    primary_key: yes
     sql: ${TABLE}.media_id ;;
 
 
