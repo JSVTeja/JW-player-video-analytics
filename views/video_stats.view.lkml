@@ -31,10 +31,9 @@ view: video_stats {
     type: date_time
   }
 
-  measure: play_rate {
-    sql: ${TABLE}.completes/${TABLE}.plays;;
-    drill_fields: [media_id,date]
+  measure: aggregate_play_rate {
     type: number
+    sql: CASE WHEN ${total_plays} > 0 THEN ${total_completes} / ${total_plays} ELSE 0 END ;;
   }
 
   measure: total_embeds {
@@ -51,4 +50,4 @@ view: video_stats {
     type:  sum
     sql: ${completes} ;;
   }
-}
+  }
