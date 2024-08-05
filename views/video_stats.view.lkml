@@ -11,7 +11,7 @@ view: video_stats {
   }
   dimension: media_id {
     sql: ${TABLE}.media_id ;;
-
+    primary_key: yes
 
   }
   dimension: embeds {
@@ -36,14 +36,17 @@ view: video_stats {
     drill_fields: [media_id,date]
     type: number
   }
+
   measure: total_embeds {
     type:  sum
     sql: ${embeds} ;;
   }
+
   measure: total_plays {
     type:  sum
     sql: ${plays} ;;
   }
+
   measure: total_completes {
     type:  sum
     sql: ${completes} ;;
