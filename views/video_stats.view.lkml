@@ -41,8 +41,7 @@ view: video_stats {
     sql: ${embeds} ;;
   }
   measure: total_plays {
-    type:  sum_distinct
-    sql_distinct_key: ${media_id} ;;
+    type:  sum
     sql: ${plays} ;;
   }
   measure: total_completes {
