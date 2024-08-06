@@ -38,7 +38,8 @@ view: video_stats {
   }
 
   measure: total_embeds {
-    type:  sum
+    type:  sum_distinct
+    sql_distinct_key: ${media_id} ;;
     sql: ${embeds} ;;
   }
 
@@ -49,7 +50,8 @@ view: video_stats {
   }
 
   measure: total_completes {
-    type:  sum
+    type:  sum_distinct
+    sql_distinct_key: ${media_id} ;;
     sql: ${completes} ;;
   }
   }
