@@ -33,7 +33,7 @@ view: video_stats {
 
   measure: aggregate_play_rate {
     type: number
-    sql: CASE WHEN ${total_plays} > 0 THEN ${total_completes} / ${total_plays} ELSE 0 END ;;
+    sql: CASE WHEN ${total_plays} > 0 THEN (${total_completes} / ${total_plays})*100 ELSE 0 END ;;
   }
 
   measure: total_embeds {
