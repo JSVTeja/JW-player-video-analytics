@@ -1,10 +1,10 @@
 view: video_stats {
   sql_table_name: `apnews-dataplatform.video_engagement.jw_player_engagement_by_media` ;;
 
-  dimension: date {
+  dimension_group: date {
+    type: time
+    timeframes: [date, week, month]
     sql: ${TABLE}.date ;;
-    datatype:  date
-
   }
   dimension: platform {
     sql: ${TABLE}.platform ;;

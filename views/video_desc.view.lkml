@@ -1,11 +1,12 @@
 view: video_desc {
   sql_table_name: `apnews-dataplatform.video_engagement.jw_player_content` ;;
 
-  dimension: created {
-    sql:  ${TABLE}.created ;;
-    datatype: date
-
+  dimension_group: created {
+    type: time
+    timeframes: [date, week, month]
+    sql: ${TABLE}.created ;;
   }
+
   dimension: duration {
     sql:  ${TABLE}.duration ;;
     type: number
@@ -48,4 +49,4 @@ view: video_desc {
     type:  sum
     sql: ${TABLE}.duration ;;
     }
-    }
+}
