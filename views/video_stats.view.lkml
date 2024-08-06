@@ -43,7 +43,8 @@ view: video_stats {
   }
 
   measure: total_plays {
-    type:  sum
+    type:  sum_distinct
+    sql_distinct_key: ${media_id} ;;
     sql: ${plays} ;;
   }
 
