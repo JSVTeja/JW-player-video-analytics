@@ -37,20 +37,17 @@ view: video_stats {
   }
 
   measure: total_embeds {
-    type:  sum_distinct
-    sql_distinct_key: ${media_id} ;;
+    type:  sum
     sql: ${embeds} ;;
   }
 
   measure: total_plays {
-    type:  sum_distinct
-    sql_distinct_key: ${media_id} ;;
+    type:  sum
     sql: ${plays} ;;
   }
 
   measure: total_completes {
-    type:  sum_distinct
-    sql_distinct_key: ${media_id} ;;
+    type:  sum
     sql: ${completes} ;;
   }
   }
