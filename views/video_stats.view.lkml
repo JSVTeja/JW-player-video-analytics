@@ -36,6 +36,11 @@ view: video_stats {
     sql: CASE WHEN ${total_plays} > 0 THEN (${total_completes} / ${total_plays})*100 ELSE 0 END ;;
   }
 
+  measure: avg_plays_per_video_by_category {
+    type: number
+    sql: ${total_plays} / COUNT(DISTINCT ${video_desc.id});;
+  }
+
   measure: total_embeds {
     type:  sum
     sql: ${embeds} ;;
