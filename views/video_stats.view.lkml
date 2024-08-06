@@ -3,7 +3,7 @@ view: video_stats {
 
   dimension: date {
     sql: ${TABLE}.date ;;
-    type:  date
+    datatype:  date
 
   }
   dimension: platform {
