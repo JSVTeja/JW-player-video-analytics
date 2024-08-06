@@ -4,6 +4,7 @@ view: video_stats {
   dimension_group: date {
     type: time
     timeframes: [date, week, month]
+    datatype: datetime
     sql: ${TABLE}.date ;;
   }
   dimension: platform {

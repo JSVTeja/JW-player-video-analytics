@@ -4,6 +4,7 @@ view: video_desc {
   dimension_group: created {
     type: time
     timeframes: [date, week, month]
+    datatype: datetime
     sql: ${TABLE}.created ;;
   }
 
