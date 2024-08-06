@@ -46,8 +46,7 @@ view: video_desc {
   dimension: title {
     sql:  ${TABLE}.title ;;
   }
-  measure: total_duration {
-    type:  sum
-    sql: ${TABLE}.duration ;;
+  measure: num_of_videos {
+    type:  count
     }
 }
