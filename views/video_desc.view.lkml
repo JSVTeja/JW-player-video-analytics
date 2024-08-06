@@ -49,4 +49,8 @@ view: video_desc {
   measure: num_of_videos {
     type:  count
     }
+  measure: avg_video_duration {
+    type: average
+    sql: {TABLE}.duration ;;
+  }
 }
