@@ -51,6 +51,6 @@ view: video_desc {
     }
   measure: avg_video_duration {
     type: average
-    sql: {TABLE}.duration ;;
+    sql: ${TABLE}.duration ;;
   }
 }
