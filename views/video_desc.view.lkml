@@ -3,7 +3,7 @@ view: video_desc {
 
   dimension: created {
     sql:  ${TABLE}.created ;;
-    type: date
+    datatype: date
 
   }
   dimension: duration {
