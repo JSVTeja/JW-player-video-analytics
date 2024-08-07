@@ -12,6 +12,22 @@ view: video_desc {
     sql:  ${TABLE}.duration ;;
     type: number
   }
+  dimension: duration_bins {
+    case: {
+      when: {
+        sql: round(${duration}) < 30 ;;
+        label: "Short"
+      }
+      when: {
+        sql: round(${duration}) >=30 AND round(${duration}) <=60 ;;
+        label: "Medium"
+      }
+      when: {
+        sql: round(${duration} > 60 ;;
+        label: "Long"
+      }
+    }
+  }
   dimension: external_id {
     sql:  ${TABLE}.external_id ;;
   }
