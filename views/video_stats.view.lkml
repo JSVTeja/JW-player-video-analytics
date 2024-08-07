@@ -12,6 +12,7 @@ view: video_stats {
   }
   dimension: media_id {
     sql: ${TABLE}.media_id ;;
+    primary_key: yes
 
   }
   dimension: embeds {
