@@ -64,6 +64,7 @@ view: video_desc {
   }
   measure: num_of_videos {
     type:  count
+    drill_fields: [category,duration_bins]
     }
   measure: avg_video_duration {
     type: average
