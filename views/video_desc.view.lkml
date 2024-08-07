@@ -23,7 +23,7 @@ view: video_desc {
         label: "Medium"
       }
       when: {
-        sql: round(${duration} > 60 ;;
+        sql: round(${duration}) > 60 ;;
         label: "Long"
       }
     }
