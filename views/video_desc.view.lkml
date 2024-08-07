@@ -12,7 +12,7 @@ view: video_desc {
     sql:  ${TABLE}.duration ;;
     type: number
   }
-  dimension: duration_bins {
+  dimension: video_bins {
     case: {
       when: {
         sql: round(${duration}) < 30 ;;
@@ -64,7 +64,7 @@ view: video_desc {
   }
   measure: num_of_videos {
     type:  count
-    drill_fields: [category,duration_bins,num_of_videos]
+    drill_fields: [category,video_bins,num_of_videos]
     }
   measure: avg_video_duration {
     type: average
