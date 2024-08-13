@@ -1,5 +1,5 @@
 view: metrics {
-  sql_table_name: `apnews-dataplatform.ga_ua_metrics.metrics` ;;
+  sql_table_name: `apnews-dataplatform.ga_ua_metrics.metrics_v3` ;;
 
   dimension_group: date {
     type: time

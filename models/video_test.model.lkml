@@ -11,3 +11,4 @@ explore: video_stats{
     relationship: many_to_one
   }
 }
+explore: metrics {}
