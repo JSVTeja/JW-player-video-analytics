@@ -11,4 +11,17 @@ explore: video_stats{
     relationship: many_to_one
   }
 }
-explore: metrics {}
+explore: web_metrics {
+  view_name: metrics
+  description: "Web Metrics"
+  always_filter: {
+   filters: [platform: "web"]
+}
+}
+explore: app_metrics {
+  view_name: metrics
+  description: "App Metrics"
+  always_filter: {
+    filters: [platform: "app"]
+  }
+}

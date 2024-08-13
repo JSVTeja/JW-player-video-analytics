@@ -60,4 +60,8 @@ view: metrics {
     type: number
     sql: ${screenviews}/NULLIF(${users_daily},0);;
 }
+  measure: total_engagement {
+    type: number
+    sql: ${pageviews}+${screenviews} ;;
+  }
 }
